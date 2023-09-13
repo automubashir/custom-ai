@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        obstacle {
+            display: block;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            background-color: black;
+        }
+        point.danger-zone {
+            animation: tick 1s linear infinite;
+        }
+
+        @keyframes tick {
+            0% {
+                outline: 0px solid red;
+            }
+            100% {
+                outline: 5px solid red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <custom-bot color="red" start="true" speed="200"></custom-bot>
+    <!-- <custom-bot color="green" data-start="true"></custom-bot>
+    <custom-bot color="blue" data-start="true"></custom-bot>
+    <custom-bot data-start="true"></custom-bot> -->
+    <!-- <obstacle></obstacle> -->
+    <script src="js/custom-ai.js"></script>
+</body>
+</html>
